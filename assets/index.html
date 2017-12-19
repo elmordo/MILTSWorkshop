@@ -3,7 +3,40 @@
     <head>
         <title>Hello world!</title>
         <script type="text/javascript" src="/app.js"></script>
+        <style type="text/css">
+.hidden
+{
+    display: block;
+}
+        </style>
     </head>
     <body>
+        <button type="button" id="toggle-new-task-form">Toggle new task form</button>
+        <form id="new-task-form" class="hidden">
+            <div>
+                <label>Subject</label>
+                <input type="text" name="subject">
+            </div>
+            <div>
+                <label>Note</label>
+                <div>
+                    <textarea name="note"></textarea>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Add task</button>
+            </div>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Subject</th>
+                    <th>Created at</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="item-target"></tbody>
+        </table>
     </body>
 </html>

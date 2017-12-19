@@ -46,7 +46,7 @@ export class ItemManager
         this._items = new ItemIndex();
     }
 
-    public addItem(): TodoItem
+    public createItem(): TodoItem
     {
         let item: TodoItem = new TodoItem();
         this._items[item.id] = item;
